@@ -1,0 +1,9 @@
+<h1><%= @project.title %></h1>
+<% if @tasks.empty? %>
+  <h2>No tasks at this moment</h2>
+<% else %>
+  <% @tasks.each do |t| %>
+    <h3><%= t.body %></h3>
+  <% end %>
+<% end %>
+<%= link_to "Add new task", new_project_task_path(@project.id) %>

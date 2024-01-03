@@ -1,2 +1,12 @@
 <h1>Tasks#new</h1>
 <p>Find me in app/views/tasks/new.html.erb</p>
+<div>
+  <%= form_for([@project, @task]) do |t| %>
+
+   <%= t.label :body, "New task name"%>
+   <%= t.text_field :body, class: "form-control" %>
+
+   <%= t.submit "Add new task", class: "btn btn-primary" %>
+
+  <% end %>
+</div>

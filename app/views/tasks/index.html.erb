@@ -1,0 +1,6 @@
+<h2>All tasks</h2>
+<% @tasks.each do |t| %>
+  <ul>
+    <li><%= t.body %> | <%= t.project.title %></li>
+  </ul>
+<% end %>
