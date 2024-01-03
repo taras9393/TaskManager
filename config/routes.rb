@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   root 'simplepages#home'
-  resources :projects
-  resources :tasks
+  resources :projects do
+    resources :tasks
+  end  
 
 end
